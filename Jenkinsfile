@@ -10,7 +10,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
+                sh 'echo Jenkins is running on Linux container'
             }
         }
 
@@ -19,7 +19,7 @@ pipeline {
                 branch 'dev'
             }
             steps {
-                echo 'This is TEST build (dev branch)'
+                echo 'This is TEST build for dev branch'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
                 branch 'main'
             }
             steps {
-                echo 'This is PRODUCTION build (main branch)'
+                echo 'This is PRODUCTION build for main branch'
             }
         }
     }
